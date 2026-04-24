@@ -17,7 +17,9 @@ This project follows a simple versioning approach while the convention is early:
 - Laravel-specific security model template.
 - GitHub-compatible `SECURITY.md` vulnerability policy template.
 - AI agent security audit guide.
+- Laravel security model author skill.
+- Laravel security review skill with hotspot scanner.
+- Laravel security test writer skill.
 - Generic web app example.
 - Laravel SaaS example.
 - Open-source support files.
-

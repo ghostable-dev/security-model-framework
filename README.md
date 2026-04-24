@@ -32,6 +32,9 @@ Use both files when possible:
 - [templates/SECURITY_MODEL.laravel.md](templates/SECURITY_MODEL.laravel.md): Laravel-focused version covering guards, Sanctum, Fortify, policies, gates, Livewire, queues, jobs, logs, storage, config, and environment handling.
 - [templates/SECURITY.github-policy.md](templates/SECURITY.github-policy.md): small GitHub-compatible vulnerability reporting policy that links to `SECURITY_MODEL.md`.
 - [guides/agent-security-audit.md](guides/agent-security-audit.md): structured audit instructions that force an agent to report what it checked, what passed, what failed, and what remains unknown.
+- [skills/laravel-security-review](skills/laravel-security-review/SKILL.md): Codex-style Laravel security review skill with focused references and a fast hotspot scanner.
+- [skills/laravel-security-model-author](skills/laravel-security-model-author/SKILL.md): skill for generating or updating a Laravel app's `SECURITY_MODEL.md` from the actual codebase.
+- [skills/laravel-security-test-writer](skills/laravel-security-test-writer/SKILL.md): skill for writing focused Laravel authorization, tenancy, exposure, webhook, file, API, and Livewire security tests.
 - [examples/generic-web-app/SECURITY_MODEL.md](examples/generic-web-app/SECURITY_MODEL.md): compact example for a generic web app.
 - [examples/laravel-saas/SECURITY_MODEL.md](examples/laravel-saas/SECURITY_MODEL.md): compact example for a Laravel SaaS app.
 
@@ -70,6 +73,24 @@ The templates require agents to return structured security audit output:
 ```
 
 The rule is simple: do not mark a check as `Pass` unless it was verified directly.
+
+## Laravel Skills
+
+The Laravel skills are designed for fast agent use. Each skill keeps its main `SKILL.md` small, then splits deeper checks into focused references.
+
+The review skill includes a lightweight PHP scanner:
+
+```bash
+php skills/laravel-security-review/scripts/laravel-security-hotspots.php
+```
+
+The scanner does not prove the app is secure. It quickly identifies files and patterns an agent should inspect before making claims in the audit output.
+
+Suggested skill flow for a Laravel project:
+
+1. Use `laravel-security-model-author` to create or update `SECURITY_MODEL.md`.
+2. Use `laravel-security-review` before changing security-sensitive code.
+3. Use `laravel-security-test-writer` to add targeted regression tests for the audit findings.
 
 ## Laravel Focus
 
