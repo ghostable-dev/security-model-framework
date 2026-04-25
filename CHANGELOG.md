@@ -20,6 +20,7 @@ This project follows a simple versioning approach while the convention is early:
 - Laravel security model author skill.
 - Laravel security review skill with hotspot scanner.
 - Laravel security test writer skill.
+- Package-specific Laravel security references for Livewire, Sanctum, Passport, Scout, Cashier, Filament, Nova, Horizon, Telescope, and Spatie Permission.
 - Generic web app example.
 - Laravel SaaS example.
 - Open-source support files.

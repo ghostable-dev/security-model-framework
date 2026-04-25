@@ -29,6 +29,18 @@ If this skill was copied elsewhere, run the script from its actual path.
 - Secrets, config, files, queues, events, notifications: `references/secrets-and-side-effects.md`
 - Tests and final audit output: `references/tests-and-output.md`
 
+If the app uses common Laravel packages, read only the matching package references:
+
+- Livewire: `references/packages/livewire.md`
+- Sanctum: `references/packages/sanctum.md`
+- Passport: `references/packages/passport.md`
+- Scout: `references/packages/scout.md`
+- Cashier: `references/packages/cashier.md`
+- Filament: `references/packages/filament.md`
+- Nova: `references/packages/nova.md`
+- Horizon and Telescope: `references/packages/horizon-telescope.md`
+- Spatie Permission: `references/packages/spatie-permission.md`
+
 5. Make the smallest code change that satisfies the security model.
 6. Add or update tests when behavior changes or a risk is security-relevant.
 7. Return structured audit output. Never mark `Pass` unless directly verified.
@@ -70,4 +82,3 @@ If this skill was copied elsewhere, run the script from its actual path.
 - `Pass`: verified directly with code, config, command output, or tests.
 - `Fail`: verified missing or unsafe behavior.
 - `Unknown`: not enough evidence to prove pass or fail.
-

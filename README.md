@@ -78,6 +78,8 @@ The rule is simple: do not mark a check as `Pass` unless it was verified directl
 
 The Laravel skills are designed for fast agent use. Each skill keeps its main `SKILL.md` small, then splits deeper checks into focused references.
 
+The review skill includes package-specific checks for Livewire, Sanctum, Passport, Scout, Cashier, Filament, Nova, Horizon, Telescope, and Spatie Permission.
+
 The review skill includes a lightweight PHP scanner:
 
 ```bash
